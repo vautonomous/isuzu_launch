@@ -4,7 +4,7 @@
   <!-- load parameter -->
   <xacro:property
     name="vehicle_info"
-    value="${load_yaml('$(find isuzu_description)/config/vehicle_info.param.yaml')}"
+    value="${load_yaml('$(find isuzu_vehicle_description)/config/vehicle_info.param.yaml')}"
   />
 
   <!-- vehicle body -->
@@ -12,7 +12,7 @@
     <visual>
       <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="${pi/2.0} 0 ${pi/2.0}"/>
       <geometry>
-        <mesh filename="package://isuzu_description/mesh/isuzu.fbx" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://isuzu_vehicle_description/mesh/isuzu.fbx" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
